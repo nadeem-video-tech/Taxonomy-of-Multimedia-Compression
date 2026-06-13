@@ -1,0 +1,311 @@
+Overall Taxonomy
+Multimedia Compression
+│
+├── Lossless Compression
+│
+└── Lossy Compression
+      │
+      ├── Image Compression
+      ├── Audio Compression
+      ├── Video Compression
+      ├── 3D Compression
+      └── Streaming Compression
+
+1. Lossless Compression
+No information is lost.
+Original data can be perfectly reconstructed.
+
+Used in:
+Medical imaging
+Archival systems
+Scientific imaging
+Text/data storage
+
+Techniques
+| Method                    | Principle                      |
+| ------------------------- | ------------------------------ |
+| Run Length Encoding (RLE) | Repeated symbol coding         |
+| Huffman Coding            | Variable-length entropy coding |
+| Arithmetic Coding         | Probability-based coding       |
+| LZW                       | Dictionary-based coding        |
+| Predictive Coding         | Encode prediction error        |
+
+Examples
+| Media Type | Formats    |
+| ---------- | ---------- |
+| Images     | PNG, TIFF  |
+| Audio      | FLAC, ALAC |
+| Video      | FFV1       |
+
+2. Lossy Compression
+Some information is discarded.
+
+Goal:
+Large compression ratio
+Acceptable visual/audio quality
+
+Used in:
+Streaming
+Broadcasting
+OTT
+Gaming
+
+Taxonomy by Media Type
+A. Image Compression
+Image Compression Taxonomy
+Image Compression
+│
+├── Lossless
+│
+└── Lossy
+      │
+      ├── Transform Coding
+      ├── Predictive Coding
+      ├── Vector Quantization
+      ├── Fractal Coding
+      └── Neural Compression
+A1. Transform Coding
+Most important category.
+Transforms image into frequency domain.
+
+Techniques:
+DCT
+Wavelet
+Fourier
+
+Examples:
+JPEG
+JPEG2000
+
+A2. Predictive Coding
+Predict current pixel from neighboring pixels.
+Examples:
+DPCM
+JPEG-LS
+
+A3. Vector Quantization (VQ)
+Image blocks mapped to codebooks.
+
+Advantages:
+High compression
+
+Disadvantages:
+Codebook complexity
+
+A4. Fractal Compression
+Uses self-similarity in images.
+Rarely used commercially due to:
+High encoding complexity
+
+A5. Neural Image Compression
+Deep learning-based compression:
+Autoencoders
+Hyperpriors
+Transformers
+
+B. Audio Compression
+Taxonomy
+Audio Compression
+│
+├── Waveform Coding
+├── Parametric Coding
+├── Perceptual Coding
+└── Neural Audio Coding
+
+B1. Waveform Coding
+Preserves waveform shape.
+Examples:
+PCM
+ADPCM
+
+B2. Parametric Coding
+Models speech production system.
+Used in:
+Speech codecs
+
+Examples:
+LPC
+CELP
+
+B3. Perceptual Coding
+Uses psychoacoustic masking.
+
+Examples:
+MP3
+AAC
+Opus
+
+B4. Neural Audio Coding
+Deep learning-based:
+Speech synthesis
+Neural vocoders
+
+Examples:
+WaveNet
+SoundStream
+
+C. Video Compression
+Most complex multimedia compression type.
+Video Compression Taxonomy
+Video Compression
+│
+├── Intra-frame Coding
+├── Inter-frame Coding
+├── Hybrid Video Coding
+├── Scalable Coding
+├── Distributed Coding
+└── Neural Video Coding
+
+C1. Intra-frame Coding
+Each frame compressed independently.
+Similar to image compression.
+
+Examples:
+Motion JPEG
+I-frames
+
+C2. Inter-frame Coding
+Uses temporal redundancy between frames.
+
+Techniques:
+Motion estimation
+Motion compensation
+
+C3. Hybrid Video Coding
+Dominant modern approach.
+
+Combines:
+Prediction
+Transform coding
+Entropy coding
+
+Examples:
+x264
+x265
+SVT-AV1
+
+C4. Scalable Video Coding (SVC)
+Supports:
+Multi-resolution
+Multi-bitrate
+Multi-quality
+
+Used in:
+Adaptive streaming
+
+C5. Distributed Video Coding
+Shifts complexity toward decoder.
+
+Based on:
+Slepian-Wolf theory
+Wyner-Ziv coding
+
+C6. Neural Video Compression
+Deep learning replaces classical modules.
+
+Research area:
+End-to-end codecs
+Learned motion estimation
+Neural entropy coding
+
+D. 3D Multimedia Compression
+Categories
+| Type                    | Application       |
+| ----------------------- | ----------------- |
+| Mesh Compression        | CAD, gaming       |
+| Point Cloud Compression | AR/VR             |
+| Volumetric Compression  | Holographic media |
+
+Standards:
+MPEG PCC
+AVS PCC
+
+E. Streaming Compression
+Streaming systems combine:
+
+Compression
+Networking
+Adaptive delivery
+Streaming Compression
+│
+├── Constant Bitrate
+├── Variable Bitrate
+├── Adaptive Bitrate
+└── Low-Latency Streaming
+
+Redundancy-Based Taxonomy
+Compression can also be classified by redundancy removal.
+1. Spatial Redundancy
+Correlation among neighboring pixels.
+
+Used in:
+JPEG
+HEVC intra prediction
+
+2. Temporal Redundancy
+Correlation between frames.
+Used in:
+Motion estimation
+
+3. Spectral Redundancy
+Correlation among color channels/frequencies.
+
+4. Psycho-visual / Psychoacoustic Redundancy
+Remove information humans barely perceive.
+
+Critical in:
+MP3
+AAC
+Video quantization
+
+Entropy Coding Taxonomy
+Entropy coding removes statistical redundancy.
+Methods
+| Method            | Use           |
+| ----------------- | ------------- |
+| Huffman           | JPEG          |
+| Arithmetic Coding | H.264 CABAC   |
+| Range Coding      | AV1           |
+| ANS               | Modern codecs |
+
+
+AI-Based Compression Taxonomy
+Modern classification includes AI.
+AI Compression
+│
+├── CNN-based
+├── Transformer-based
+├── GAN-based
+└── Diffusion-based
+Standard-Based Taxonomy
+| Media             | Standards           |
+| ----------------- | ------------------- |
+| Image             | JPEG, JPEG2000      |
+| Audio             | MP3, AAC, Opus      |
+| Video             | AVC, HEVC, AV1, VVC |
+| Chinese Standards | AVS1/2/3            |
+
+Application-Based Taxonomy
+| Application       | Compression Goal      |
+| ----------------- | --------------------- |
+| Medical           | Lossless              |
+| OTT Streaming     | High compression      |
+| Esports           | Low latency           |
+| Automotive        | Real-time reliability |
+| Surveillance      | Storage efficiency    |
+| Satellite Imaging | Error resilience      |
+
+Modern Research Trends
+Current multimedia compression research includes:
+Neural codecs
+AI-assisted rate control
+Perceptual optimization
+Edge/cloud compression
+Learned entropy models
+Generative compression
+
+Important Organizations
+MPEG
+JVET
+AVS Workgroup
+Alliance for Open Media
